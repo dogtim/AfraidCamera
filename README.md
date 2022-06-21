@@ -1,0 +1,2 @@
+# AfraidCamera
+A surveillance application
