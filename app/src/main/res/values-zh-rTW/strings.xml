@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">害怕管家</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="nav_bottom_camera_list">相機列表</string>
+    <string name="nav_bottom_explore">探索</string>
+    <string name="nav_bottom_premium">Premium</string>
 </resources>
