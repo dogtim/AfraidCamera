@@ -6,6 +6,9 @@ A surveillance application
 ## Localization
 - Only support English and Traditional Chinese. 
 
+## Toolbar
+- The Alfred Application seems not use the Toolbar layout, might customize by themself
+
 # Milestone
 
 ## Phase 1

@@ -1,13 +1,13 @@
 package com.dogtim.afraidcamera
 
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.dogtim.afraidcamera.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,7 +29,11 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_camera_list, R.id.navigation_explore, R.id.navigation_premium
             )
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
+
+        binding.toolbar.setupWithNavController(navController, appBarConfiguration)
+        binding.toolbar.inflateMenu(R.menu.tool_menu)
         navView.setupWithNavController(navController)
+
     }
+
 }
