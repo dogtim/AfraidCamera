@@ -5,4 +5,7 @@
     <string name="nav_bottom_camera_list">相機列表</string>
     <string name="nav_bottom_explore">探索</string>
     <string name="nav_bottom_premium">Premium</string>
+
+    <string name="menu_surveillance">監控端</string>
+    <string name="menu_camera">相機端</string>
 </resources>

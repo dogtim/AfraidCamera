@@ -1,7 +1,9 @@
 package com.dogtim.afraidcamera
 
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -32,8 +34,20 @@ class MainActivity : AppCompatActivity() {
 
         binding.toolbar.setupWithNavController(navController, appBarConfiguration)
         binding.toolbar.inflateMenu(R.menu.tool_menu)
+
         navView.setupWithNavController(navController)
 
     }
 
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        when (item.itemId) {
+//            R.id.group -> Toast.makeText(this, item.title, Toast.LENGTH_SHORT).show()
+//        }
+//        return super.onOptionsItemSelected(item)
+//    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        Toast.makeText(this, item.title, Toast.LENGTH_SHORT).show()
+return true
+    }
 }

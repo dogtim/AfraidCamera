@@ -1,12 +1,13 @@
 package com.dogtim.afraidcamera.ui.home
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.TextView
+import android.widget.Toast
+import androidx.annotation.NonNull
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.dogtim.afraidcamera.R
 import com.dogtim.afraidcamera.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -32,11 +33,25 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+        setHasOptionsMenu(true)
+
         return root
     }
-
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.tool_menu, menu)
+    }
     override fun onDestroyView() {
         super.onDestroyView()
+
         _binding = null
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.group -> Toast.makeText(context, item.title, Toast.LENGTH_SHORT).show()
+        }
+        Toast.makeText(context, item.title, Toast.LENGTH_SHORT).show()
+        return super.onOptionsItemSelected(item)
     }
 }

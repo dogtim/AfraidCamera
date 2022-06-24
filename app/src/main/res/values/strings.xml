@@ -4,4 +4,7 @@
     <string name="nav_bottom_camera_list">Camera List</string>
     <string name="nav_bottom_explore">Explore</string>
     <string name="nav_bottom_premium">Premium</string>
+
+    <string name="menu_surveillance">Surveillance Side</string>
+    <string name="menu_camera">Camera Side</string>
 </resources>
